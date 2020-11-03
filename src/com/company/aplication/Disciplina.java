@@ -1,22 +1,56 @@
 package com.company.aplication;
 
 public class Disciplina {
-   private int [] aluno ; // new int [10];
+    private Aluno[] aluno; // new int [10];
+    // public int [] Aluno = new int[10];
+    private int cont;
 
-    public Disciplina(int[] aluno){
+    public Disciplina(Aluno[] aluno, int cont) {
+        this.aluno = aluno;
+        this.cont = cont;
+    }
+
+    public Aluno[] getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(Aluno[] aluno) {
         this.aluno = aluno;
     }
 
-    public void cadastrarAlunos(Aluno novoAluno){    // public int[]
-      //  for(int i=0;i<aluno.length;i++){}
-        for (int i = 0; i < aluno.length;i++){
-            System.out.println("adicionar aluno: " + aluno);
+    public int getCont() {
+        return cont;
+    }
+
+    public void setCont(int cont) {
+        this.cont = cont;
+    }
+
+    public void cadastrarAlunos(Integer novoAluno) {    // public int[]
+        //  for(int i=0;i<aluno.length;i++){}
+        for (int i = 0; i < aluno.length; i++) {
+            System.out.println("adicionar aluno: " + aluno[i].);
+            aluno[i]
         }
     }
 
-    public void calcularMedia(Aluno matricula){
-        for(int i = 0;i < aluno.length;i++){
-            
+    public void cadastrarAlunos(Aluno matricula) {
+        for (int i = 0; i < aluno.length; i++) {
+            aluno.length[i] + 1;
+
         }
     }
+
+    public boolean calcularMedia(Integer matricula) {
+        for (int i = 0; i < aluno.length; i++) {
+            if (aluno[i].getMatricula() == matricula) {
+                aluno[i].setMedia(aluno[i].getNota1() + aluno[i].getNota2() + aluno[i].getNota3() / 3);
+                return true;
+            }
+            System.out.println("nenhuma matricula encontrada");
+        }
+        return false;
+    }
 }
+
+

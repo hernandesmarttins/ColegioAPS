@@ -15,10 +15,12 @@ public class Aluno {
         this.nota2 = nota2;
         this.nota3 = nota3;
     }
-    public Aluno(int matricula,String nomeAluno){
+   /* public Aluno(int matricula,String nomeAluno){
         this.matricula = matricula;
         this.nomeAluno = nomeAluno;
     }
+
+    */
 
     public int getMatricula() {
         return matricula;

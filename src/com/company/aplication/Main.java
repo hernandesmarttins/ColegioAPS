@@ -12,8 +12,8 @@ public class Main {
 
         System.out.println("quantidade de alunos matriculados: ");
         Integer x = scanner.nextInt();
-
-        do {
+        Aluno[] vetor = new Aluno[x];
+        for (int i = 0; i < x; i++) {
             System.out.println("Dados aluno: ");
             System.out.print("matricula: ");
             int matricula = scanner.nextInt();
@@ -26,9 +26,8 @@ public class Main {
             System.out.println("nota 3: ");
             float nota3 = scanner.nextFloat();
 
-            Aluno aluno = new Aluno(matricula, nomeAluno, nota1, nota2, nota3);
-
-        } while ( <=x  );
+            vetor[i] = new Aluno(matricula, nomeAluno, nota1, nota2, nota3);
+        }
 
 
         scanner.close();

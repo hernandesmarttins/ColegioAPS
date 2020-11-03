@@ -3,7 +3,7 @@ package com.company.aplication;
 public class Disciplina {
     private Aluno[] aluno; // new int [10];
     // public int [] Aluno = new int[10];
-    private int cont;
+    private int cont = 0;
 
     public Disciplina(Aluno[] aluno, int cont) {
         this.aluno = aluno;
@@ -28,19 +28,22 @@ public class Disciplina {
 
     public void cadastrarAlunos(Integer novoAluno) {    // public int[]
         //  for(int i=0;i<aluno.length;i++){}
-        for (int i = 0; i < aluno.length; i++) {
-            System.out.println("adicionar aluno: " + aluno[i].);
-            aluno[i]
-        }
-    }
-
-    public void cadastrarAlunos(Aluno matricula) {
-        for (int i = 0; i < aluno.length; i++) {
-            aluno.length[i] + 1;
+        for (int i = 0; i < cont; i++) {
 
         }
     }
 
+    /* public void cadastrarAlunos(Aluno matricula) {
+         for (int i = 0; i < aluno.length; i++) {
+             aluno.length[i] + 1;
+
+         }
+
+
+     }
+
+
+     */
     public boolean calcularMedia(Integer matricula) {
         for (int i = 0; i < aluno.length; i++) {
             if (aluno[i].getMatricula() == matricula) {

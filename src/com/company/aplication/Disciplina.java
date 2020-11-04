@@ -1,13 +1,15 @@
 package com.company.aplication;
 
+import java.util.Arrays;
+
 public class Disciplina {
     private Aluno[] aluno; // new int [10];
     // public int [] Aluno = new int[10];
-    private int cont = 0;
+    private int contAlunos;
 
-    public Disciplina(Aluno[] aluno, int cont) {
-        this.aluno = aluno;
-        this.cont = cont;
+    public Disciplina(int contAlunos) {
+        aluno = new Aluno[contAlunos];
+        this.contAlunos = 0;
     }
 
     public Aluno[] getAluno() {
@@ -18,41 +20,41 @@ public class Disciplina {
         this.aluno = aluno;
     }
 
-    public int getCont() {
-        return cont;
+    public int getContAlunos() {
+        return contAlunos;
     }
 
-    public void setCont(int cont) {
-        this.cont = cont;
+    public void setContAlunos(int cont) {
+        this.contAlunos = cont;
     }
 
-    public void cadastrarAlunos(Integer novoAluno) {    // public int[]
+    public void cadastrarAlunos(Aluno aluno) {    // public int[]
         //  for(int i=0;i<aluno.length;i++){}
-        for (int i = 0; i < cont; i++) {
-
+        for (int i = 0; i < this.aluno.length; i++) {
+            if (this.aluno[i] == null) {
+                this.aluno[i] = aluno;
+                contAlunos += i;
+            }
         }
     }
 
-    /* public void cadastrarAlunos(Aluno matricula) {
-         for (int i = 0; i < aluno.length; i++) {
-             aluno.length[i] + 1;
-
-         }
-
-
-     }
-
-
-     */
     public boolean calcularMedia(Integer matricula) {
         for (int i = 0; i < aluno.length; i++) {
             if (aluno[i].getMatricula() == matricula) {
                 aluno[i].setMedia(aluno[i].getNota1() + aluno[i].getNota2() + aluno[i].getNota3() / 3);
                 return true;
             }
-            System.out.println("nenhuma matricula encontrada");
         }
+        System.out.println("nenhuma matricula encontrada");
         return false;
+    }
+
+    public void mostrarAprovado() {
+        for (int i = 0; i < aluno.length; i++) {
+            if (aluno[i].getMedia() >= 7) {
+                System.out.println("matricula : " + aluno[i].getMatricula());
+            }
+        }
     }
 }
 

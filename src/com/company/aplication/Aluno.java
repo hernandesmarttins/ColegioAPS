@@ -14,6 +14,7 @@ public class Aluno {
         this.nota1 = nota1;
         this.nota2 = nota2;
         this.nota3 = nota3;
+        media = (float) 0;
     }
    /* public Aluno(int matricula,String nomeAluno){
         this.matricula = matricula;

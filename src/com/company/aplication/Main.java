@@ -11,9 +11,28 @@ public class Main {
 
 
         System.out.println("quantidade de alunos matriculados: ");
-        Integer x = scanner.nextInt();
-        Aluno[] vetor = new Aluno[x];
-        for (int i = 0; i < x; i++) {
+
+        //  Integer x = scanner.nextInt();
+        //  Aluno[] vetor = new Aluno[x];
+
+        Aluno aluno1 = new Aluno(1, "joaozinho", 8, 7, 3);
+        Aluno aluno2 = new Aluno(2, "mariazinha", 7, 8, 10);
+
+        Disciplina mat = new Disciplina(2);
+
+        System.out.println(mat.getAluno().length);
+
+        mat.cadastrarAlunos(aluno1);
+        mat.calcularMedia(1);
+
+        mat.cadastrarAlunos(aluno2);
+        mat.calcularMedia(2);
+        System.out.println(aluno1.getMedia());
+        System.out.println(aluno2.getMedia());
+
+        mat.mostrarAprovado();
+
+    /*    for (int i = 0; i < x; i++) {
             System.out.println("Dados aluno: ");
             System.out.print("matricula: ");
             int matricula = scanner.nextInt();
@@ -29,6 +48,7 @@ public class Main {
             vetor[i] = new Aluno(matricula, nomeAluno, nota1, nota2, nota3);
         }
 
+     */
 
         scanner.close();
     }

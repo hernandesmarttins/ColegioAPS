@@ -71,4 +71,15 @@ public class Aluno {
         this.media = media;
     }
 
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "matricula=" + matricula +
+                ", nomeAluno='" + nomeAluno + '\'' +
+                ", nota1=" + nota1 +
+                ", nota2=" + nota2 +
+                ", nota3=" + nota3 +
+                ", media=" + media +
+                '}';
+    }
 }

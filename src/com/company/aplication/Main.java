@@ -10,15 +10,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
 
-        System.out.println("quantidade de alunos matriculados: ");
-
+        System.out.printf("quantidade de alunos matriculados: ");
+        Disciplina mat = new Disciplina(2);
         //  Integer x = scanner.nextInt();
         //  Aluno[] vetor = new Aluno[x];
 
-        Aluno aluno1 = new Aluno(1, "joaozinho", 8, 7, 3);
-        Aluno aluno2 = new Aluno(2, "mariazinha", 7, 8, 10);
-
-        Disciplina mat = new Disciplina(2);
+        Aluno aluno1 = new Aluno(1, "joaozinho", 8, 7, 8);
+        Aluno aluno2 = new Aluno(2, "mariazinha", 3, 3, 3);
+        Aluno aluno3 = new Aluno(3, "anastacia", 10, 10, 10);
 
         System.out.println(mat.getAluno().length);
 
@@ -27,11 +26,14 @@ public class Main {
 
         mat.cadastrarAlunos(aluno2);
         mat.calcularMedia(2);
-        System.out.println(aluno1.getMedia());
-        System.out.println(aluno2.getMedia());
-
+        //  System.out.println(aluno1.getMedia());
+        System.out.println(String.format("%.2f", aluno1.getMedia()));
+        System.out.println(String.format("%.2f", aluno2.getMedia()));
         mat.mostrarAprovado();
+        System.out.println(aluno1.toString());
 
+
+        //  mat.mostrarAprovado();
     /*    for (int i = 0; i < x; i++) {
             System.out.println("Dados aluno: ");
             System.out.print("matricula: ");
@@ -46,10 +48,7 @@ public class Main {
             float nota3 = scanner.nextFloat();
 
             vetor[i] = new Aluno(matricula, nomeAluno, nota1, nota2, nota3);
-        }
-
-     */
-
+        }   */
         scanner.close();
     }
 }

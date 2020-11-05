@@ -30,23 +30,25 @@ public class Disciplina {
 
     public void cadastrarAlunos(Aluno aluno) {    // public int[]
         //  for(int i=0;i<aluno.length;i++){}
+        int indice = 0;
         for (int i = 0; i < this.aluno.length; i++) {
-            if (this.aluno[i] == null) {
-                this.aluno[i] = aluno;
-                contAlunos += i;
+            if (this.aluno[i] != null) {
+                // this.aluno[i] = aluno;
+                indice += 1;
             }
         }
+        this.aluno[indice] = aluno;
     }
 
-    public boolean calcularMedia(Integer matricula) {
+    public int calcularMedia(Integer matricula) {
         for (int i = 0; i < aluno.length; i++) {
             if (aluno[i].getMatricula() == matricula) {
-                aluno[i].setMedia(aluno[i].getNota1() + aluno[i].getNota2() + aluno[i].getNota3() / 3);
-                return true;
+                aluno[i].setMedia((aluno[i].getNota1() + aluno[i].getNota2() + aluno[i].getNota3()) / 3);
+                return matricula;
             }
         }
         System.out.println("nenhuma matricula encontrada");
-        return false;
+        return 0;
     }
 
     public void mostrarAprovado() {
@@ -56,6 +58,17 @@ public class Disciplina {
             }
         }
     }
+
+   /* public void acharMelhorNota(int max ){
+        for(int i = 1; i< aluno.length;i++){
+            if(aluno[i] > max){
+              max = aluno[i];
+            }
+        }
+        return  ;
+    }
+    */
+
 }
 
 
